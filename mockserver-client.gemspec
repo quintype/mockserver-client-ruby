@@ -28,13 +28,12 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.add_development_dependency 'simplecov', '~> 0.8'
   spec.add_development_dependency 'webmock'
 
-  spec.add_dependency 'activesupport', '>= 4.1'
   spec.add_dependency 'colorize', '~> 0.7'
   spec.add_dependency 'hashie', '~> 3.0'
-  spec.add_dependency 'json', '>= 1.8'
-  spec.add_dependency 'activesupport', '>= 4.1'
+  spec.add_dependency 'json'
+  spec.add_dependency 'activesupport'
   spec.add_dependency 'rest-client', '>= 1.7'
-  spec.add_dependency 'logging_factory', '~> 0.0.2'
-  spec.add_dependency 'rest-client', '>= 1.7'
+  spec.add_dependency 'logging_factory'
+  spec.add_dependency 'logging', '2.0'
   spec.add_dependency 'thor', '~> 0.19'
 end
