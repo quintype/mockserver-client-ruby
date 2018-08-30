@@ -72,7 +72,7 @@ module MockServer
       response = @base[RETRIEVE_ENDPOINT].put(request.to_json)
       logger.debug("Got retrieve response: #{response.code}")
       requests = Requests.new([])
-      parse_string_to_json(response.body).map { |result| requests << request_from_json(result) } unless response.empty?
+      parse_string_to_json(response.body).map { |result| requests << request_from_json(result.except("headers")) } unless response.empty?
       requests.code = response.code
       requests
     end
