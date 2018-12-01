@@ -31,6 +31,7 @@ module MockServer
       protocol = ('https' if port == 443) || 'http'
       @base   = RestClient::Resource.new("#{protocol}://#{host}:#{port}", headers: { 'Content-Type' => 'application/json' })
       @logger = ::LoggingFactory::DEFAULT_FACTORY.log(self.class)
+      @logger.level = :info
     end
 
     # Clear all expectations with the given request
