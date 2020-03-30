@@ -14,7 +14,6 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.description = 'A Ruby Client for MockServer that enables easy mocking of any system you integrate with via HTTP or HTTPS (i.e. services, web sites, etc)'
 
   spec.required_ruby_version     = '>= 2.3'
-  spec.required_rubygems_version = '~> 2.3'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
